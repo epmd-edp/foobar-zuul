@@ -18,7 +18,7 @@ logging:
     org.springframework.web: INFO
 
 keycloak:
-  auth-server-url: https://keycloak-sit-demo.demo-cluster.edp-epam.com/auth
+  auth-server-url: http://ec2-18-185-211-132.eu-central-1.compute.amazonaws.com:31972/auth
   realm: foobar
   resource: foobar
   public-client: true
