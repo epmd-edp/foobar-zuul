@@ -17,13 +17,25 @@ logging:
     ROOT: INFO
     org.springframework.web: INFO
 
+keycloak:
+  auth-server-url: https://keycloak-sit-demo.demo-cluster.edp-epam.com/auth
+  realm: foobar
+  resource: foobar
+  public-client: true
+
 zuul:
   sensitiveHeaders:
   routes:
-    example:
-      path: /example/**
-      serviceId: example
+    foo:
+      path: /foo/**
+      serviceId: foo
+    bar:
+      path: /bar/**
+      serviceId: bar
 
-example:
+foo:
   ribbon:
-    listOfServers: example:8080
+    listOfServers: foo:8080
+bar:
+  ribbon:
+    listOfServers: bar:8080
