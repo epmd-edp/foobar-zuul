@@ -52,8 +52,8 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/foo").hasRole("admin")
-                .antMatchers("/bar").hasRole("admin")
-                .antMatchers("/foo").hasRole("user");
+                .antMatchers("/api/foo").hasRole("admin")
+                .antMatchers("/api/bar").hasRole("admin")
+                .antMatchers("/api/foo").hasRole("user");
     }
 }
