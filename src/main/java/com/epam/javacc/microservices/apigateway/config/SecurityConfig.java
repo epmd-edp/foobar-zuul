@@ -53,6 +53,14 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/foo/**").hasRole("admin")
-                .antMatchers("/bar/**").access("hasRole('admin') or hasRole('user')");
+                .antMatchers("/bar/**").hasRole("user")
+                .and()
+                .logout()
+                .logoutUrl("/logout")
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .and()
+                .csrf()
+                .disable();
     }
 }
