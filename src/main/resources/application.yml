@@ -36,7 +36,7 @@ zuul:
 
 foo:
   ribbon:
-    listOfServers: foo:8080
+    listOfServers: foo-service:8080
 bar:
   ribbon:
-    listOfServers: bar:8080
+    listOfServers: bar-service:8080
