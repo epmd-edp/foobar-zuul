@@ -27,10 +27,10 @@ zuul:
   sensitiveHeaders:
   routes:
     foo:
-      path: /api/foo/**
+      path: /foo/**
       serviceId: foo
     bar:
-      path: /api/bar/**
+      path: /bar/**
       serviceId: bar
 
 foo:
