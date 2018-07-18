@@ -21,7 +21,8 @@ keycloak:
   auth-server-url: http://ec2-18-185-211-132.eu-central-1.compute.amazonaws.com:31972/auth
   realm: foobar
   resource: foobar
-  public-client: true
+  credentials:
+    secret: secret
 
 zuul:
   sensitiveHeaders:
