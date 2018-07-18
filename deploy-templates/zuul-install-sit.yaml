@@ -36,7 +36,7 @@ objects:
       targetPort: 8765
     selector:
       app: "zuul"
-    type: ClusterIP
+    type: NodePort
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
