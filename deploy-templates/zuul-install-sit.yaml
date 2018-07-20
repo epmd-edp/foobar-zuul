@@ -113,6 +113,25 @@ objects:
               memory: 1Gi
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
+          volumeMounts:
+          - name: keycloak-secret
+            mountPath: "/etc/secrets/keycloak"
+            readOnly: true
+          env:
+          - name: JAVA_OPTIONS
+            value: >
+              -Dspring.cloud.kubernetes.secrets.paths=/etc/secrets
+        volumes:
+        - name: keycloak-secret
+          secret:
+            secretName: keycloak-secret
+            items:
+              - key: foo.realm
+                path: keycloak.realm
+              - key: foo.client.id
+                path: keycloak.resource
+              - key: foo.client.secret
+                path: keycloak.credentials.secret
         dnsPolicy: ClusterFirst
         restartPolicy: Always
         schedulerName: default-scheduler
