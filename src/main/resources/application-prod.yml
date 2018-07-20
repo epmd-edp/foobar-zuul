@@ -1,0 +1,15 @@
+keycloak:
+  realm: ${REALM}
+  resource: ${CLIENT_ID}
+  credentials:
+    secret: ${CLIENT_SECRET}
+
+bar-service:
+  ribbon:
+    NIWSServerListClassName: io.fabric8.kubeflix.ribbon.KubernetesServerList
+    PortName: bar-service
+
+foo-service:
+  ribbon:
+    NIWSServerListClassName: io.fabric8.kubeflix.ribbon.KubernetesServerList
+    PortName: foo-service

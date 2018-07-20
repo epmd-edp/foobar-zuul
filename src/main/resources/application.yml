@@ -32,15 +32,3 @@ zuul:
     bar-service:
       path: /bar/**
       service-id: bar-service
-
-bar-service:
-  ribbon:
-    NIWSServerListClassName: io.fabric8.kubeflix.ribbon.KubernetesServerList
-    Namespace: sit-demo
-    PortName: bar-service
-
-foo-service:
-  ribbon:
-    NIWSServerListClassName: io.fabric8.kubeflix.ribbon.KubernetesServerList
-    Namespace: sit-demo
-    PortName: foo-service
