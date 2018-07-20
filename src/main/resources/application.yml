@@ -23,20 +23,3 @@ keycloak:
   resource: foobar-client
   credentials:
     secret: secret
-
-zuul:
-  sensitiveHeaders:
-  routes:
-    foo:
-      path: /foo/**
-      serviceId: foo
-    bar:
-      path: /bar/**
-      serviceId: bar
-
-foo:
-  ribbon:
-    listOfServers: foo-service:8080
-bar:
-  ribbon:
-    listOfServers: bar-service:8080

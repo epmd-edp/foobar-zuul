@@ -34,6 +34,7 @@ objects:
       port: 8765
       protocol: TCP
       targetPort: 8765
+      nodePort: 31000
     selector:
       app: "zuul"
     type: NodePort
