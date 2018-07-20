@@ -69,15 +69,15 @@
         </dependency>
 
         <dependency>
-            <groupId>io.fabric8</groupId>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-kubernetes</artifactId>
-            <version>0.1.6</version>
+            <version>0.2.0.RELEASE</version>
         </dependency>
 
         <dependency>
-            <groupId>io.fabric8</groupId>
-            <artifactId>spring-cloud-kubernetes-ribbon</artifactId>
-            <version>0.1.6</version>
+            <groupId>io.fabric8.kubeflix</groupId>
+            <artifactId>ribbon-discovery</artifactId>
+            <version>1.0.28</version>
         </dependency>
 
         <dependency>
