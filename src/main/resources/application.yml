@@ -39,4 +39,4 @@ foo:
     listOfServers: foo-service:8080
 bar:
   ribbon:
-    listOfServers: localhost:8080
+    listOfServers: bar-service:8080
