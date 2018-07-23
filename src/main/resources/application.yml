@@ -21,6 +21,7 @@ keycloak:
   auth-server-url: https://keycloak-edp-cockpit-demo.demo-cluster.edp-epam.com/auth
   realm: foobar-realm
   resource: foobar-client
+  ssl-required: EXTERNAL
   credentials:
     secret: secret
 
