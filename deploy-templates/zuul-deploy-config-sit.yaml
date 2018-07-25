@@ -23,3 +23,12 @@ objects:
     name: "zuul"
   data:
     key: "value"
+- apiVersion: v1
+  kind: Secret
+  type: Opaque
+  metadata:
+    name: "keycloak-secret"
+  stringData:
+    foobar.client.id: foobar-client
+    foobar.client.secret: fc4a02d1-c80b-4bac-ac03-a5d92a453e87
+    foobar.realm: foobar-realm-sit
