@@ -18,7 +18,7 @@ logging:
     org.springframework.web: INFO
 
 keycloak:
-  auth-server-url: https://keycloak-edp-cockpit-demo.demo-cluster.edp-epam.com/auth
+  auth-server-url: https://keycloak-edp-cockpit-demo.demo.edp-epam.com/auth
   realm: foobar-realm
   resource: foobar-client
   disable-trust-manager: true
