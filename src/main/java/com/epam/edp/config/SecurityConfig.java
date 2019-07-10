@@ -1,4 +1,4 @@
-package com.epam.javacc.microservices.apigateway.config;
+package com.epam.edp.config;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
