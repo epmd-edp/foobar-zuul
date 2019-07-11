@@ -16,7 +16,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 
-		<apigateway-port>8765</apigateway-port>
+		<apigateway-port>8080</apigateway-port>
 
 		<sleuth-zipkin.version>1.0.1.RELEASE</sleuth-zipkin.version>
 		<spring-boot.version>1.5.9.RELEASE</spring-boot.version>
