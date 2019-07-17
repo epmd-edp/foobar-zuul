@@ -17,22 +17,11 @@ logging:
     ROOT: INFO
     org.springframework.web: INFO
 
-# TO CHANGE THIS CONFIGURATION
-keycloak:
-  auth-server-url: https://keycloak-edp-cockpit-demo.demo.edp-epam.com/auth
-  realm: foobar-realm
-  resource: foobar-client
-  disable-trust-manager: true
-  credentials:
-    secret: secret
-
 zuul:
   routes:
     cart-service:
       path: /cart-service/**
       service-id: cart-service
-      url: http://cart-service:8080
     order-service:
       path: /order-service/**
       service-id: order-service
-      url: http://order-service:8080
