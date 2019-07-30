@@ -3,7 +3,7 @@ info:
 
 server:
   port: ${apigateway-port}
-  
+
 endpoints:
   restart:
     enabled: true
@@ -25,3 +25,35 @@ zuul:
     order-service:
       path: /order-service/**
       service-id: order-service
+
+order-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    MaxAutoRetriesNextServer: 1
+    MaxAutoRetries: 0
+    OkToRetryOnAllOperations: true
+    ReadTimeout: 5000
+
+cart-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    MaxAutoRetriesNextServer: 1
+    MaxAutoRetries: 0
+    OkToRetryOnAllOperations: true
+    ReadTimeout: 5000
+
+---
+spring:
+  profiles: local
+  cloud:
+    kubernetes:
+      ribbon:
+        enabled: false
+
+order-service:
+  ribbon:
+    listOfServers: https://order-service-gk-grace-master-dev.dev.gk-edp.com
+
+cart-service:
+  ribbon:
+    listOfServers: https://cart-service-gk-grace-master-dev.dev.gk-edp.com
